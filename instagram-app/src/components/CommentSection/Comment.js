@@ -1,16 +1,18 @@
-import React, { Fragment } from "react";
+import React from "react";
+import PropTypes from "prop-types";
 
-export default function Comment({comments})   {
-  console.log(comments)
+ function Comment({username, text})   {
   return (
-    <Fragment>
-      {
-        comments.map((comment, index) => {
-          return <div key ={index}>
-            <p>{comment.username}</p> <span className="comment">{comment.text}</span>
-          </div>
-        })
-      }
-    </Fragment>
+    <div className = "single-comment">
+      <h4>{username}</h4>
+      <p>{text}</p>
+    </div>
   );
 }
+
+Comment.propTypes = {
+  text: PropTypes.string.isRequired,
+  username: PropTypes.string.isRequired
+}
+
+export default Comment;

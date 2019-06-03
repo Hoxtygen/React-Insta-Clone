@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react';
-import Comment from "../CommentSection/Comment"
+//import Comment from "../CommentSection/Comment";
+import PropTypes from "prop-types"
+import CommentSection from '../CommentSection/CommentSection';
 
-export default function PostContainer({data}) {
+function PostContainer({data}) {
     console.log(data)
     //console.log(username)
     return (
         <Fragment>
-           <h2>Hello world</h2>
           {
               data.map((user) => {
                   return <div className = "single" key = {user.username}>
@@ -26,7 +27,7 @@ export default function PostContainer({data}) {
                               <p className="likes">{user.likes}</p>
                           </div>
                       </div>
-                      <Comment
+                      <CommentSection
                       comments = {user.comments} 
                       />
                   </div>
@@ -36,3 +37,10 @@ export default function PostContainer({data}) {
         </Fragment>
     )
 }
+
+PostContainer.propTypes = {
+    data: PropTypes.array.isRequired
+  }
+
+
+export default PostContainer;

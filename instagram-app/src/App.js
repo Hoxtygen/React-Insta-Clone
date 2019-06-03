@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import dummyData from "./dummy-data";
 import PostContainer from "./components/PostContainer/PostContainer";
+import SearchBar from './components/SearchBar/SearchBar';
 
 
 export default class App extends Component {
@@ -16,9 +17,15 @@ export default class App extends Component {
     const { data } = this.state;
     return (
       <div className="App">
-         <PostContainer
+        <div className="search-container">
+        <SearchBar />
+        </div>
+        <div className="post-wrapper">
+        <PostContainer
             data = { this.state.data}
            />
+        </div>
+        
       </div>
     );
   }

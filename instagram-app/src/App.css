@@ -1,16 +1,17 @@
-.App {
-  text-align: center;
-}
+
 
 
 .single   {
   border: 1px solid red;
+  width: 40%;
+  margin: 0 auto;
 }
 
 .single .profile  {
-  border: 1px solid blue;
+  border: 1px solid orange;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .single .profile img  {
@@ -18,3 +19,32 @@
   width: 100px;
   border-radius: 50%;
 }
+
+.single .profile .image-container-thumbnail   {
+  border: 1px solid red;
+  margin-right: 10px;
+}
+
+.image-container img   {
+  width: 100%;
+  height: auto;;
+}
+
+.image-likes  {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-likes .likes   {
+  border: 1px solid blue;
+}
+
+.image-likes .likes span  {
+  border: 1px solid yellow;
+}
+
+.single-comment   {
+  border: 1px solid maroon;
+  display: flex;
+}
+
