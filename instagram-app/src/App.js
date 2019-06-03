@@ -21,9 +21,14 @@ export default class App extends Component {
         <SearchBar />
         </div>
         <div className="post-wrapper">
-        <PostContainer
-            data = { this.state.data}
-           />
+        {
+          data.map((item, index) => {
+          return <PostContainer
+                    key = {index}
+                    data = { item}
+                  />
+          })
+        }
         </div>
         
       </div>

@@ -3,7 +3,6 @@ import Comment from "./Comment";
 import PropTypes from "prop-types";
 
 export default function CommentSection({comments}) {
-    console.log(comments)
     return (
         <div>
             {
