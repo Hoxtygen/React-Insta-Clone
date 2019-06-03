@@ -16,9 +16,9 @@ export default class App extends Component {
     const { data } = this.state;
     return (
       <div className="App">
-        <PostContainer
-          {...data}
-         /> 
+         <PostContainer
+            data = { this.state.data}
+           />
       </div>
     );
   }
