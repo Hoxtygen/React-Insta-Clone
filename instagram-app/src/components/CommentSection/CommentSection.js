@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 export default function CommentSection({comments}) {
     return (
-        <div>
+        <div className = "comment-container">
             {
                 comments.map((comment, index) => {
                     return <Comment 

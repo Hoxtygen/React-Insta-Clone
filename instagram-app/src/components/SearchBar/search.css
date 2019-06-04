@@ -1,28 +1,46 @@
 .header   {
-    border: 1px solid red;
+    border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.6rem 1rem;
+    padding: 1rem .5rem;
+    margin-bottom: 10px;
   }
 
   .right-container  {
-      border: 1px solid blue;
       display: flex;
+      padding: 5px;
+      justify-content: space-between;
   }
 
   .right-container span     {
       display: inline-block;
       width: 50px;
-      font-size: 2rem;
+      font-size: 1.3rem;
       color: #222;
+      text-align: center;
   }
   
   .insta-logo-container     {
-      border: 1px solid red;
       display: flex;
       width: 10rem;
       justify-content: space-between;
+      align-items: center;
+  }
+
+  .insta-logo-container .icon   {
+      font-size: 2.3rem;
+      display: inline-block;
+      margin-right: 5px;
+  }
+
+  /* come back to this*/
+  .insta-logo-container span.pipe   {
+      display: block;
+      height: 25px;
+      font-weight: 700;
+      width: 5px;
+      color: black;
   }
 
   .insta-logo-container h2  {
@@ -30,15 +48,10 @@
       font-size: 2rem;
   }
 
-  .search-box-wrapper   {
-      border: 1px solid magenta;
-      
-  }
-
   .search-box-wrapper input     {
       width: 100%;
-      height: 30px;
-      line-height: 30px;
+      height: 20px;
+      line-height: 20px;
       outline: none;
       padding: 8px;
       font-size: 1.2rem;

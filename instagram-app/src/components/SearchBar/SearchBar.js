@@ -5,7 +5,8 @@ export default function SearchBar() {
     return (
         <div className = "header">
             <div className = "insta-logo-container">
-                <p><span><i className="fab fa-instagram"></i></span></p> |
+                <p><span><i className="fab fa-instagram icon"></i></span></p>
+                <p><span className = "pipe">&#124;</span></p>
                 <h2>Instagram</h2>
             </div>
             <div className = "search-box-wrapper">
