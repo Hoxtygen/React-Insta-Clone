@@ -3,8 +3,6 @@ import PropTypes from "prop-types"
 import CommentSection from '../CommentSection/CommentSection';
 
 function PostContainer({ data }) {
-    console.log(data)
-    //console.log(username)
     return (
         <div className="single" key={data.username}>
             <div className="profile">

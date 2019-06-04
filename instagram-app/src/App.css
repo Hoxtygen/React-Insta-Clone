@@ -64,3 +64,20 @@
   margin-right: 6px;
 }
 
+
+.new-comment  {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.new-comment input  {
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  font-size: 1.2rem;
+  outline: none;
+}
+
+/* .comment-container  {
+  border-bottom: 1px solid #ccc;
+} */
