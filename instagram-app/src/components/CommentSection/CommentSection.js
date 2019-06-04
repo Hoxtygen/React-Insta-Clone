@@ -29,6 +29,9 @@ export default class CommentSection extends Component{
             username: "Maduro"
         }
         const commentList = this.props.comments.push(newComment);
+        if (this.state.text === "") {
+            return;
+        }
         this.setState({
             comments: commentList,
             text: "",

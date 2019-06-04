@@ -18,6 +18,18 @@ export default class App extends Component {
       data: dummyData
     })
   }
+
+  handleLikes = (id) => {
+    const newData = [...this.state.data]
+    newData.forEach((data, index) => {
+      if(data.id === id)  {
+        data.likes += 1;
+      }
+    })
+    this.setState({
+      data: newData
+    })
+  }
   
 
   render() {
@@ -29,10 +41,12 @@ export default class App extends Component {
         </div>
         <div className="post-wrapper">
         {
-          data.map((item, index) => {
+          data.map((item) => {
           return <PostContainer
-                    key = {index}
+                    id = {item.id}
+                    key = {item.id}
                     data = { item}
+                    handleLikes = {this.handleLikes}
                   />
           })
         }

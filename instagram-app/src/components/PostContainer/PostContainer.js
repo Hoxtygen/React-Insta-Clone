@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from "prop-types"
 import CommentSection from '../CommentSection/CommentSection';
 
-function PostContainer({ data }) {
+function PostContainer({ data, handleLikes, id }) {
     return (
         <div className="single" key={data.username}>
             <div className="profile">
@@ -16,7 +16,7 @@ function PostContainer({ data }) {
                     <img src={data.imageUrl} alt="" />
                 </div>
                 <div className="likes">
-                    <span><i className="far fa-heart"></i></span>
+                    <span onClick = {() =>handleLikes(id)}><i className="far fa-heart"></i></span>
                     <span><i className="far fa-comment"></i></span>
                     <p className="p-likes">{data.likes} likes</p>
                 </div>
