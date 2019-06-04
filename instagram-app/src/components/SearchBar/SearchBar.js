@@ -1,7 +1,7 @@
 import React from 'react'
 import "./search.css"
 
-export default function SearchBar() {
+export default function SearchBar({handleSearch, handlePostFilter}) {
     return (
         <div className = "header">
             <div className = "insta-logo-container">
@@ -10,7 +10,14 @@ export default function SearchBar() {
                 <h2>Instagram</h2>
             </div>
             <div className = "search-box-wrapper">
-                <input type="text" name="" id="" placeholder = "&#x1F50E;Search"/>
+                <form action="" onSubmit = {handlePostFilter}>
+                    <input 
+                        type="text" 
+                        name="" 
+                        placeholder = "&#x1F50E;Search"
+                        onChange = {handleSearch}
+                    />
+                </form>
             </div>
             <div className = "right-container">
                 <p><span><i className="far fa-compass"></i></span></p>

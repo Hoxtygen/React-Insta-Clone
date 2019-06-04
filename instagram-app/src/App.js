@@ -9,7 +9,8 @@ export default class App extends Component {
   constructor(props)  {
     super(props);
     this.state = {
-      data: []
+      data: [],
+      searchInput: ""
     }
   }
 
@@ -19,7 +20,22 @@ export default class App extends Component {
     })
   }
 
-  handleLikes = (id) => {
+  handleSearch = event => {
+    this.setState({
+      searchInput: event.target.value
+    })
+  }
+
+  handlePostFilter = event => {
+    event.preventDefault()
+    if (this.state.searchInput.trim()) {
+      this.setState(prevState =>({
+        data: prevState.data.filter(dataItem => dataItem.username.toLowerCase().includes(prevState.searchInput.toLowerCase()))
+      }));
+    }
+  }
+
+  handleLikes = id => {
     const newData = [...this.state.data]
     newData.forEach((data, index) => {
       if(data.id === id)  {
@@ -37,7 +53,10 @@ export default class App extends Component {
     return (
       <div className="App">
         <div className="search-container">
-        <SearchBar />
+        <SearchBar
+          handleSearch = {this.handleSearch}
+          handlePostFilter = {this.handlePostFilter}
+         />
         </div>
         <div className="post-wrapper">
         {
