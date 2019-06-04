@@ -9,11 +9,18 @@ export default class App extends Component {
   constructor(props)  {
     super(props);
     this.state = {
-      data: dummyData
+      data: []
     }
   }
+
+  componentDidMount() {
+    this.setState({
+      data: dummyData
+    })
+  }
+  
+
   render() {
-    //console.log(this.state.data);
     const { data } = this.state;
     return (
       <div className="App">
