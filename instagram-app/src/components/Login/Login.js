@@ -17,6 +17,14 @@ export default class Login extends Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        const user = this.state.username;
+        if(!user) return;
+        localStorage.setItem("user", user)
+        window.location.reload()
+    }
+
 
     render() {
         return (
@@ -31,18 +39,20 @@ export default class Login extends Component {
                             name = "username" 
                             placeholder = "Enter your username"
                             onChange = {this.handleChange}
+                            value = {this.state.username}
                         />
                     </div>
                     <div className="single-input">
                         <input 
-                            type="text" 
+                            type="password" 
                             name = "password" 
                             placeholder = "Enter your password"
                             onChange = {this.handleChange}
+                            value = {this.state.password}
                         />
                     </div>
                     <div className="btn-container">
-                        <button type="submit">Login</button>
+                        <button type="submit" onClick = {this.handleSubmit}>Login</button>
                     </div>
                 </form>
             </div>
