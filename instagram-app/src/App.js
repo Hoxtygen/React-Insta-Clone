@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import './App.css';
 import PostsPage from "./components/PostContainer/PostsPage";
-import withAuthenticate from './authentication/withAuthenticate'
+import withAuthenticate from './authentication/withAuthenticate';
+import Login from "./components/Login/Login";
 
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)
@@ -19,6 +20,7 @@ export default class App extends Component {
     return (
       <div className="App">
        <ComponentFromWithAuthenticate />
+       <Login />
         
       </div>
     );
