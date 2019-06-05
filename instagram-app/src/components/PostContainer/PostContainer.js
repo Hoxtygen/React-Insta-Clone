@@ -4,7 +4,7 @@ import CommentSection from '../CommentSection/CommentSection';
 
 function PostContainer({ data, handleLikes, id }) {
     return (
-        <div className="single" key={data.username}>
+        <div className="single" >
             <div className="profile">
                 <div className="image-container-thumbnail">
                     <img src={data.thumbnailUrl} alt="" />

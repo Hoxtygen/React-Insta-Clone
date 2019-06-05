@@ -14,11 +14,24 @@ export default class App extends Component {
     }
   }
 
+  // componentWillMount() {
+  //   localStorage.getItem("postsData") && this.setState ({
+  //     data: JSON.parse(localStorage.getItem("postsData"))
+  //   })
+  // }
+  
+
   componentDidMount() {
-    this.setState({
-      data: dummyData
-    })
+    localStorage.setItem("postsData", JSON.stringify(dummyData))
+    localStorage.getItem("postsData") && this.setState ({
+      data: JSON.parse(localStorage.getItem("postsDat"))
+    }) 
   }
+
+  // componentWillMount() {
+  //   localStorage.setItem("postsData", JSON.stringify(dummyData))
+  // }
+  
 
   handleSearch = event => {
     this.setState({
