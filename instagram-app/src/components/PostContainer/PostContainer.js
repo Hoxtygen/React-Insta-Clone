@@ -16,7 +16,7 @@ function PostContainer({ data, handleLikes, id }) {
                     <img src={data.imageUrl} alt="" />
                 </div>
                 <div className="likes">
-                    <span onClick = {() =>handleLikes(id)}><i className="far fa-heart"></i></span>
+                    <span onClick = {() =>handleLikes(id)}><i className="far fa-heart icon"></i></span>
                     <span><i className="far fa-comment"></i></span>
                     <p className="p-likes">{data.likes} likes</p>
                 </div>
