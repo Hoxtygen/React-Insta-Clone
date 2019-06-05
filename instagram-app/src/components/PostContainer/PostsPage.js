@@ -4,7 +4,7 @@ import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar"
 
 
-export default class PostPage extends Component {
+export default class PostsPage extends Component {
     constructor(props)  {
         super(props);
         this.state = {
