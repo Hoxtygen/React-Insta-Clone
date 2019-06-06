@@ -1,8 +1,8 @@
-.App  {
+/* .App  {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
+} */
 
 
 /* .single   {
@@ -74,12 +74,12 @@
   padding: 10px;
 } */
 
-.new-comment input  {
+/* .new-comment input  {
   width: 100%;
   height: 30px;
   padding: 5px;
   font-size: 1.2rem;
   outline: none;
-}
+} */
 
 

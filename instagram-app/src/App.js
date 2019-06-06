@@ -6,7 +6,6 @@ import Login from "./components/Login/Login";
 import styled from "styled-components"
 
 const AppHolder = styled.div `
-border: 1px solid red;
   display: flex;
   flex-direction: column;
   justify-content: center;

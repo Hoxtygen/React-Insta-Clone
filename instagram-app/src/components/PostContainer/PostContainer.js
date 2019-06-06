@@ -5,11 +5,10 @@ import styled from "styled-components";
 
 
 const SinglePost =styled.div `
-    /* border: 1px solid red; */
+    border: 1px solid #ccc;
     width: 40%;
     margin: 0 auto;
     margin-bottom: 10px;
-    border: 1px solid blue;
 `
 
 const UserThumbnail = styled.div `
