@@ -5,6 +5,7 @@ import withAuthenticate from './authentication/withAuthenticate';
 import Login from "./components/Login/Login";
 
 
+
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login)
 export default class App extends Component {
   constructor(props)  {

@@ -28,14 +28,15 @@ export default class CommentSection extends Component{
             text: this.state.text,
             username: "Maduro"
         }
-        const commentList = this.props.comments.push(newComment);
+        const commentList = this.props.comments.push(newComment); //[ ...this.props.comment, newComment ]
         if (this.state.text === "") {
             return;
         }
         this.setState({
             comments: commentList,
-            text: "",
-            index: ""
+            text: " ",
+            index: "",
+            value: ""
         })
        
         
@@ -66,6 +67,7 @@ export default class CommentSection extends Component{
                         id="new-comment"
                         placeholder="Add a comment...."
                         onChange = {this.handleChange}
+                        value ={this.state.text}
                     />
                         {/*<button type="submit">Add Comment</button>*/}
                     </form>

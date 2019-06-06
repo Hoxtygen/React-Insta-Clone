@@ -4,6 +4,8 @@ import PostContainer from "./PostContainer";
 import SearchBar from "../SearchBar/SearchBar"
 
 
+
+
 export default class PostsPage extends Component {
     constructor(props)  {
         super(props);
