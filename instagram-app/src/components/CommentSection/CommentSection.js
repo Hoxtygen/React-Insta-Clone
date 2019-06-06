@@ -1,6 +1,20 @@
 import React, {Component} from 'react';
 import Comment from "./Comment";
 import PropTypes from "prop-types";
+import styled from "styled-components";
+
+const NewComment = styled.div `
+    overflow: hidden;
+    padding: 10px;
+
+    input {
+        width: 100%;
+        height: 30px;
+        padding: 5px;
+        font-size: 1.2rem;
+        outline: none;
+    }
+`
 
 export default class CommentSection extends Component{
     //console.log(comments)
@@ -49,7 +63,7 @@ export default class CommentSection extends Component{
         //console.log(this.state.comments)
         const { comments } = this.props;
         return (
-            <div className="comment-container">
+            <div>
                 {
                     comments.map((comment, index) => {
                         return <Comment
@@ -59,7 +73,7 @@ export default class CommentSection extends Component{
                         />
                     })
                 }
-                <div className="new-comment">
+                <NewComment>
                     <form action="" onSubmit = {this.addNewComment}>
                         <input
                         type="text"
@@ -71,7 +85,7 @@ export default class CommentSection extends Component{
                     />
                         {/*<button type="submit">Add Comment</button>*/}
                     </form>
-                </div>
+                </NewComment>
             </div>
         )
     }

@@ -3,7 +3,14 @@ import './App.css';
 import PostsPage from "./components/PostContainer/PostsPage";
 import withAuthenticate from './authentication/withAuthenticate';
 import Login from "./components/Login/Login";
+import styled from "styled-components"
 
+const AppHolder = styled.div `
+border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`
 
 
 const ComponentFromWithAuthenticate = withAuthenticate(PostsPage)(Login)
@@ -19,9 +26,9 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppHolder>
        <ComponentFromWithAuthenticate />        
-      </div>
+      </AppHolder>
     );
   }
 }
